@@ -14,6 +14,6 @@ spec:
     spec:
       containers:
       - name: myapp
-        image: mvanemmerik/ckpo:blue
+        image: mvanemmerik/ckpo:green
         ports:
         - containerPort: 8080
