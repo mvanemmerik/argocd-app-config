@@ -1,20 +1,19 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: app-server
-  labels:
-    app: app-server
+  name: myapp
 spec:
   selector:
     matchLabels:
-      app: app-server
+      app: myapp
+  replicas: 2
   template:
     metadata:
       labels:
-        app: app-server
+        app: myapp
     spec:
       containers:
-      - name: web-server
+      - name: myapp
         image: mvanemmerik/ckpo:latest
         ports:
-        - containerPort: 80
+        - containerPort: 8080
